@@ -114,28 +114,25 @@ After obtaining the data, organize it according to the path configuration used i
 
 ## Quick Start
 
-### 1. Evaluate a Checkpoint
+### 1. Test-Set Inference / Evaluation
 
 ```bash
+cd /path/to/ESD-VesNet
 python tools/eval_val_metrics.py \
   --ckpt save/vessel_esd_sam3_fullsam_edl_hnm_0105/best_fullsam_0105.pth \
-  --model sam3-sam-edl \
-  --inp-size 1024 \
-  --use-gated \
-  --device cuda
+  --model sam3-sam-edl --inp-size 1024 --device cuda \
+  --tta-mode hv --use-gated --post-close-k 7 --thr 0.43
 ```
 
-Optional useful flags:
+If you keep the checkpoint in another location, replace the value of `--ckpt` with the absolute path to `best_fullsam_0105.pth`.
+
+Optional: save per-image metrics to a CSV file.
 
 ```bash
 python tools/eval_val_metrics.py \
   --ckpt save/vessel_esd_sam3_fullsam_edl_hnm_0105/best_fullsam_0105.pth \
-  --model sam3-sam-edl \
-  --inp-size 1024 \
-  --use-gated \
-  --sweep-thr \
-  --tta \
-  --tta-mode hv \
+  --model sam3-sam-edl --inp-size 1024 --device cuda \
+  --tta-mode hv --use-gated --post-close-k 7 --thr 0.43 \
   --out-csv save/eval_results.csv
 ```
 
