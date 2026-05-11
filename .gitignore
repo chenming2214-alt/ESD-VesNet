@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+env/
+conda-env/
+
+# Logs / outputs
+*.log
+runs/
+outputs/
+results/
+
+# Model weights / checkpoints
+*.pth
+*.pt
+*.ckpt
+*.onnx
+save/
+
+# OS
+.DS_Store
