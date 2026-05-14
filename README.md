@@ -1,6 +1,4 @@
 # ESD-VesNet
-
-<<<<<<< HEAD
 **Paper title:** ESD-VesNet: Uncertainty-Aware Vessel Segmentation Network for Endoscopic Submucosal Dissection with Hard Negative Mining
 
 ESD-VesNet is an uncertainty-aware vessel segmentation framework for endoscopic submucosal dissection (ESD). The model is trained with positive-negative learning and hard negative mining to suppress false positives from non-vessel structures while preserving vessel sensitivity.
